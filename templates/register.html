@@ -1,0 +1,30 @@
+<ion-view title="Register">
+  <ion-content>
+  <form ng-submit="doRegister(user)">
+    <div class="list">
+      <label ng-show="errorMessage" class="alert alert-danger item">
+        <strong>Error:</strong> {{errorMessage}}
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Email</span>
+        <input type="email" ng-model="user.email">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Username</span>
+        <input type="text" ng-model="user.username">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Password</span>
+        <input type="password" ng-model="user.password">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Confirm Password</span>
+        <input type="password" ng-model="user.confirmPassword">
+      </label>
+      <label class="item">
+        <button class="button button-block button-dark" type="submit">Register</button>
+      </label>
+    </div>
+  </form>
+  </ion-content>
+</ion-view>

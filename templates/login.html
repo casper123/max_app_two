@@ -1,0 +1,23 @@
+<ion-view title="Login">
+  <ion-content>
+  <form ng-submit="doLogin(user)">
+    <div class="list">
+      <label ng-show="errorMessage" class="alert alert-danger item">
+        <strong>Error:</strong> {{errorMessage}}
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Username</span>
+        <input type="text" ng-model="user.username">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Password</span>
+        <input type="password" ng-model="user.password">
+      </label>
+      <label class="item">
+        <button class="button button-block button-dark" type="submit">Log in</button>
+      </label>
+    </div>
+  </form>
+  <a href="#/user/register">Register</a>
+  </ion-content>
+</ion-view>

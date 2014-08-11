@@ -1,0 +1,46 @@
+<ion-view title="Update Profile">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <form ng-submit="updateData(user)">
+    <div class="list">
+      <label ng-show="errorMessage" class="alert alert-danger item">
+        <strong>Error:</strong> {{errorMessage}}
+      </label>
+      <label ng-show="confirmMessage" class="alert alert-success item">
+        <strong>Success:</strong> {{confirmMessage}}
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Full Name</span>
+        <input type="text" ng-model="user.name">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">About Me</span>
+        <input type="text" ng-model="user.aboutme">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Email</span>
+        <input type="email" ng-model="user.email">
+      </label>
+      <label class="item">
+        <button class="button button-block button-dark" type="submit">Update</button>
+      </label>
+    </div>
+  </form>
+
+  <div class="list">
+    <label class="item item-input">
+      <button ng-click="changePicture()" class="button button-block button-dark">Change Picture</button>
+        <!--<input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>-->
+    </label>
+  </div>
+
+  <div class="list">
+    <label class="item item-input">
+      <img class="img-responsive img-circle col-xs-2" style="float:none; margin:0px auto;" ng-src="{{user.profilePicture}}" src="{{user.profilePicture}}" />
+    </label>
+  </div>
+  
+  </ion-content>
+</ion-view>

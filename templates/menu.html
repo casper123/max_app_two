@@ -1,0 +1,30 @@
+<ion-side-menus>
+
+  <ion-pane ion-side-menu-content>
+    <ion-nav-bar class="bar-stable bar-dark nav-title-slide-ios7">
+     
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+  </ion-pane>
+
+  <ion-side-menu side="left">
+    <ion-content>
+      <ion-list>
+        <ion-item nav-clear menu-close href="#/app/home">
+          <img class="img-responsive img-circle col-xs-4" style="float:none; margin:0px auto;" src="{{auth.currentUser.profilePicture}}" />
+          <p class="text-center">{{auth.currentUser.username}}</p>
+        </ion-item>
+
+        <ion-item nav-clear menu-close href="#/app/profile">
+          <i class="icon ion-person"></i> User Profile
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/setting">
+          <i class="icon ion-settings"></i> Account Settings
+        </ion-item>
+        <ion-item nav-clear menu-close href="" ng-click="signout()">
+          <i class="icon ion-log-out"></i> Logout</a>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
